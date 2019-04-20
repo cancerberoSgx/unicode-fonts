@@ -64,7 +64,7 @@ const s = transform('Hello', fonts['scriptItalic'])
 Both CLI and API supports the same options
 
  * if no `input` is given, then it will read from stdin
- * if no `output` is given then it will write to stdout
+ * if no `outputFile` is given then it will write to stdout
  * `font` is required. use `list` to see the available fonts
 
 # Join
