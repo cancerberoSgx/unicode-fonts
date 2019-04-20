@@ -1,4 +1,4 @@
-import { config, exec, ExecOutputReturnValue } from 'shelljs';
+import { exec, ExecOutputReturnValue } from 'shelljs'
 // import { writeFile, sleep } from '../src/util';
 
 // config.silent = false
@@ -13,11 +13,11 @@ import { config, exec, ExecOutputReturnValue } from 'shelljs';
 // 		exec0(`rm -rf project1 && mkdir project1 && cd project1 && npm init -y`)
 
 // 		//foo project
-// 		exec0(`cd project1 && mkdir foo && cd foo && npm init -y && 
+// 		exec0(`cd project1 && mkdir foo && cd foo && npm init -y &&
 // 		echo "module.exports = 'from foo'"> index.js`)
 
 // 		// bar project
-// 		p = exec0(`cd project1 && mkdir bar && cd bar && npm init -y && npm install --save ../foo && 
+// 		p = exec0(`cd project1 && mkdir bar && cd bar && npm init -y && npm install --save ../foo &&
 // 		echo "console.log('foo say: '+require('foo'))"> index.js && node index.js`)
 // 		expect(p.stdout).toContain(`foo say: from foo`)
 
@@ -26,13 +26,13 @@ import { config, exec, ExecOutputReturnValue } from 'shelljs';
 // 		p = exec0(`cd project1/bar && node index.js`)
 // 		expect(p.stdout).toContain(`foo say: different message`)
 
-// 		p = exec0(`cd project1/bar && 
-// 		echo "module.exports.msg = 'msg from foo: '+require('foo')"> index.js && 
+// 		p = exec0(`cd project1/bar &&
+// 		echo "module.exports.msg = 'msg from foo: '+require('foo')"> index.js &&
 // 		node index.js`)
 
 // 		// create other package third that depends on bar and foo
-// 		exec0(`cd project1 && mkdir third && cd third && npm init -y && 
-// 		npm install --save ../foo ../bar && 
+// 		exec0(`cd project1 && mkdir third && cd third && npm init -y &&
+// 		npm install --save ../foo ../bar &&
 // 		echo "console.log('third responds: '+require('bar').msg + ' '+ require('foo'))" > index.js`)
 
 // 		p = exec0(`cd project1/third && node index.js`)
@@ -41,7 +41,7 @@ import { config, exec, ExecOutputReturnValue } from 'shelljs';
 // 		// write yamat.json file on root project containing foo, bar and third subprojects
 // 		writeFile('project1/yamat.json', `
 // 		[
-// 			{"name": "foo", "path": "./foo"}, 
+// 			{"name": "foo", "path": "./foo"},
 // 			{"name": "bar", "path": "./bar"},
 // 			{"name": "third", "path": "./third"}
 // 		]`)
@@ -65,9 +65,9 @@ import { config, exec, ExecOutputReturnValue } from 'shelljs';
 // }
 
 export function exec0(cmd: string, expect0StatusCode: boolean = true): ExecOutputReturnValue {
-	const p = exec(cmd)
-	if (expect0StatusCode) {
-		expect(p.code).toBe(0)
-	}
-	return p
+  const p = exec(cmd)
+  if (expect0StatusCode) {
+    expect(p.code).toBe(0)
+  }
+  return p
 }

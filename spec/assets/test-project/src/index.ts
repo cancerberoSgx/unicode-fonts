@@ -1,5 +1,5 @@
-import {getFonts, transform} from 'unicode-fonts'
+import { getFonts, transform } from 'unicode-fonts'
 
-console.log(Object.values(getFonts()).map(f=>f.name));
+console.log(Object.values(getFonts()).map(f => f.name))
 
-console.log(transform('Fraktur is almost nun intelligible', getFonts()['boldFraktur']));
+console.log(transform('Fraktur is almost nun intelligible', getFonts()['boldFraktur']))

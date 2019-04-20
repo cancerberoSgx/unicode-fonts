@@ -48,6 +48,8 @@ npm i -g unicode-fonts
 ```
 unicode-fonts --list
 unicode-fonts --font scriptItalic --input "My name is Sebastian Gurin"
+cat package.json | unicode-fonts --font boldItalic
+cat package.json | unicode-fonts --font circled --join "0x3000" --outputFile package-boldItalic.json
 ```
 
 ## API
@@ -57,11 +59,18 @@ const fonts = getFonts()
 const s = transform('Hello', fonts['scriptItalic'])
 ```
 
+## Options
+
+Both CLI and API supports the same options
+
+ * if no `input` is given, then it will read from stdin
+ * if no `output` is given then it will write to stdout
+ * `font` is required. use `list` to see the available fonts
+
 # Join
 
-The argument --join in the CLI or `join` in the API will join the characters with given character. Take the following examples with different space characters: 
+The option `join` will join the characters with given character. Take the following examples with different space characters: 
 
-(Note: perhaps in this text file you don't notice it well, try it in the terminal)
 
 ## no join
 ```
@@ -98,21 +107,4 @@ These characters should be only used to render normal text in mediums with limit
 
 # TODO
 
- * input form stdin
-
-# Ideas
-
- * JavaScript source code transformation that format Identifiers. Variable identifiers with font1, type identifiers with font2, property / member identifiers with font3, parameter identifiers w font4... etc
-
-
-<!-- 
- * app for change font family ?  Unicode has various fonts : mathematical script, franktur, double struc, sans serif, italic, monospace, and other strange : lisu letter  ... and we can use similars from cherokee. mathematical alphanumeric symbols
-     * similar to previous : vertical text ? vertical forms, compatibilty forms
-     * phonetic extensions  , also has
-     * latin extended aditional - adds symbols below, on top of letters - could taken as effects ?
-     * number forms : has formats for numbers... romans... 
-     * enclosed alphnumerics
-     enclosed ideographic
-     * latin extended c
-     * half width and full width forms
- -->
+[TODO.md](TODO.md)

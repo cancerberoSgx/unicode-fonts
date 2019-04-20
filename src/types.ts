@@ -1,13 +1,14 @@
 export interface Font {
-  chars: number[][];
-  missing: string[];
+  chars: number[][]
+  missing: string[]
   name: string
   description: string
 }
 export interface Options {
-help?: boolean
-list?: boolean
-font?: string
-input?: string
-join?: string
+  help?: boolean
+  list?: boolean
+  font?: string
+  input?: string
+  join?: string
+  outputFile?: string
 }
