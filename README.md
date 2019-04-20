@@ -1,19 +1,32 @@
 Transform a string to its equivalent using unicode fonts:
 
 ```
-Hello world, How are you today 0123456789
-𝐇𝐞𝐥𝐥𝐨 𝐖𝐨𝐫𝐥𝐝. 𝐇𝐨𝐰 𝐚𝐫𝐞 𝐲𝐨𝐮 𝐭𝐨𝐝𝐚𝐲 𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗
-𝐻𝑒𝑙𝑙𝑜 𝑊𝑜𝑟𝑙𝑑. 𝐻𝑜𝑤 𝑎𝑟𝑒 𝑦𝑜𝑢 𝑡𝑜𝑑𝑎𝑦 0123456789
-𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅. 𝑯𝒐𝒘 𝒂𝒓𝒆 𝒚𝒐𝒖 𝒕𝒐𝒅𝒂𝒚 0123456789
-He𝓁𝓁o 𝒲o𝓇𝓁𝒹. Ho𝓌 𝒶𝓇e 𝓎o𝓊 𝓉o𝒹𝒶𝓎 0123456789
-𝓗𝓮𝓵𝓵𝓸 𝓦𝓸𝓻𝓵𝓭. 𝓗𝓸𝔀 𝓪𝓻𝓮 𝔂𝓸𝓾 𝓽𝓸𝓭𝓪𝔂 0123456789
-H𝔢𝔩𝔩𝔬 𝔚𝔬𝔯𝔩𝔡. H𝔬𝔴 𝔞𝔯𝔢 𝔶𝔬𝔲 𝔱𝔬𝔡𝔞𝔶 0123456789
-𝕳𝖊𝖑𝖑𝖔 𝖂𝖔𝖗𝖑𝖉. 𝕳𝖔𝖜 𝖆𝖗𝖊 𝖞𝖔𝖚 𝖙𝖔𝖉𝖆𝖞 0123456789
-H𝕖𝕝𝕝𝕠 𝕎𝕠𝕣𝕝𝕕. H𝕠𝕨 𝕒𝕣𝕖 𝕪𝕠𝕦 𝕥𝕠𝕕𝕒𝕪 𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡
-𝖧𝖾𝗅𝗅𝗈 𝖶𝗈𝗋𝗅𝖽. 𝖧𝗈𝗐 𝖺𝗋𝖾 𝗒𝗈𝗎 𝗍𝗈𝖽𝖺𝗒 𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫
-𝗛𝗲𝗹𝗹𝗼 𝗪𝗼𝗿𝗹𝗱. 𝗛𝗼𝘄 𝗮𝗿𝗲 𝘆𝗼𝘂 𝘁𝗼𝗱𝗮𝘆 𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵
-𝘏𝘦𝘭𝘭𝘰 𝘞𝘰𝘳𝘭𝘥. 𝘏𝘰𝘸 𝘢𝘳𝘦 𝘺𝘰𝘶 𝘵𝘰𝘥𝘢𝘺 0123456789
-𝙃𝙚𝙡𝙡𝙤 𝙒𝙤𝙧𝙡𝙙. 𝙃𝙤𝙬 𝙖𝙧𝙚 𝙮𝙤𝙪 𝙩𝙤𝙙𝙖𝙮 0123456789
+unicode-fonts --list
+ * 𝐇𝐄𝐋𝐋𝐎 𝐖𝐎𝐑𝐋𝐃, 𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟔𝟖𝟗 : bold
+ * 𝐻𝐸𝐿𝐿𝑂 𝑊𝑂𝑅𝐿𝐷, 01234567689 : italic
+ * 𝑯𝑬𝑳𝑳𝑶 𝑾𝑶𝑹𝑳𝑫, 01234567689 : boldItalic
+ * He𝒧𝒧o 𝒲o𝒭𝒧𝒟, 01234567689 : scriptItalic
+ * 𝓗𝓔𝓛𝓛𝓞 𝓦𝓞𝓡𝓛𝓓, 01234567689 : scriptBold
+ * H𝔈𝔏𝔏𝔒 𝔚𝔒𝔕𝔏𝔇, 01234567689 : fraktur
+ * 𝕳𝕰𝕷𝕷𝕺 𝖂𝕺𝕽𝕷𝕯, 01234567689 : boldFraktur
+ * H𝔼𝕃𝕃𝕆 𝕎𝕆𝕉𝕃𝔻, 𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟞𝟠𝟡 : doubleStruck
+ * 𝖧𝖤𝖫𝖫𝖮 𝖶𝖮𝖱𝖫𝖣, 𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟨𝟪𝟫 : sansSerif
+ * 𝗛𝗘𝗟𝗟𝗢 𝗪𝗢𝗥𝗟𝗗, 𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟲𝟴𝟵 : sansSerifBold
+ * 𝘏𝘌𝘓𝘓𝘖 𝘞𝘖𝘙𝘓𝘋, 01234567689 : sansSerifItalic
+ * 𝙃𝙀𝙇𝙇𝙊 𝙒𝙊𝙍𝙇𝘿, 01234567689 : sansSerifBoldItalic
+ * 𝙷𝙴𝙻𝙻𝙾 𝚆𝙾𝚁𝙻𝙳, 𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟼𝟾𝟿 : monospace
+ * ᴴᴱᴸᴸᴼ ᵂᴼᴿᴸᴰ, ⁰¹²³⁴⁵⁶⁷⁶⁸⁹ : super
+ * 🄗🄔🄛🄛🄞 🄦🄞🄡🄛🄓, 0⑴⑵⑶⑷⑸⑹⑺⑹⑻⑼ : parenthesized
+ * ⒽⒺⓁⓁⓄ ⓌⓄⓇⓁⒹ, 0①②③④⑤⑥⑦⑥⑧⑨ : circled
+ * 🄷🄴🄻🄻🄾 🅆🄾🅁🄻🄳, 01234567689 : squaredCapital
+ * 🅗🅔🅛🅛🅞 🅦🅞🅡🅛🅓, 01234567689 : negativeCircledCapital
+ * 🅷🅴🅻🅻🅾 🆆🅾🆁🅻🅳, 01234567689 : negativeSquaredCapital
+ * 🇭🇪🇱🇱🇴 🇼🇴🇷🇱🇩, 01234567689 : regionalIndicatorSymbol
+ * ＨＥＬＬＯ ＷＯＲＬＤ, ０１２３４５６７６８９ : fullWidth
+ * ꓧꓰꓡꓡꓳ ꓪꓳꓣꓡꓓ, 01234567689 : myanmar
+ * ᎻᎬᏞᏞᎤ ᏔᎤᎡᏞᎠ, ᎾᏐ23Ꮞ5Ꮾ7Ꮾ8Ꮽ : cherokee
+ * Hello World, ⅠⅡⅢⅣⅤⅥⅦⅧⅦⅨⅩ : romanNumerals
+ * Hello World, ⅳⅴⅵⅶⅷⅸⅹⅺⅹⅻⅼ : romanNumeralsSmall
 ```
 
 Explanation: unicode charset supports extra font families, so we replace normal character 'a' (char code 97) with character '𝓪' (char code 55349). So this are not currently font families or different fonts, it's the same font, that provides this special characters, some of them. 
@@ -25,7 +38,7 @@ Some Unicode categories that contain these type of characters are:
  * Mathematical Alphanumeric Symbols
 
 # Usage
-# #Install
+## Install
 
 ```
 npm i -g unicode-fonts
@@ -42,6 +55,39 @@ unicode-fonts --font scriptItalic --input "My name is Sebastian Gurin"
 ```ts
 const fonts = getFonts()
 const s = transform('Hello', fonts['scriptItalic'])
+```
+
+# Join
+
+The argument --join in the CLI or `join` in the API will join the characters with given character. Take the following examples with different space characters: 
+
+(Note: perhaps in this text file you don't notice it well, try it in the terminal)
+
+## no join
+```
+unicode-fonts --input "abcdefXZYUPO91234 hello WORLD" --font circled
+ⒶⒷⒸⒹⒺⒻⓍZⓎⓊⓅⓄ⑨①②③④ ⒽⒺⓁⓁⓄ ⓌⓄⓇⓁⒹ
+```
+## thin space
+```
+unicode-font --input "abcdefXZYUPO91234 hello WORLD" --font circled --join "0x2009"
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓧ Z Ⓨ Ⓤ Ⓟ Ⓞ ⑨ ① ② ③ ④   Ⓗ Ⓔ Ⓛ Ⓛ Ⓞ   Ⓦ Ⓞ Ⓡ Ⓛ Ⓓ 
+```
+## ideographic space
+```
+unicode-fonts --input "abcdefXZYUPO91234 hello WORLD" --font circled --join "0x3000" # hair space
+Ⓐ　Ⓑ　Ⓒ　Ⓓ　Ⓔ　Ⓕ　Ⓧ　Z　Ⓨ　Ⓤ　Ⓟ　Ⓞ　⑨　①　②　③　④　 　Ⓗ　Ⓔ　Ⓛ　Ⓛ　Ⓞ　 　Ⓦ　Ⓞ　Ⓡ　Ⓛ　Ⓓ
+```
+## zero width space
+```
+unicode-fonts --input "abcdefXZYUPO91234 hello WORLD" --font circled --join "0x200b"
+Ⓐ​Ⓑ​Ⓒ​Ⓓ​Ⓔ​Ⓕ​Ⓧ​Z​Ⓨ​Ⓤ​Ⓟ​Ⓞ​⑨​①​②​③​④​ ​Ⓗ​Ⓔ​Ⓛ​Ⓛ​Ⓞ​ ​Ⓦ​Ⓞ​Ⓡ​Ⓛ​Ⓓ
+```
+
+## backspace
+```
+unicode-fonts  --input "abcdefXZYUPO91234 hello WORLD" --font circled --join "0x0008"
+Ⓓ
 ```
 
 # WARNING

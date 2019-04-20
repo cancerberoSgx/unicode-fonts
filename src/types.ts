@@ -9,4 +9,5 @@ help?: boolean
 list?: boolean
 font?: string
 input?: string
+join?: string
 }

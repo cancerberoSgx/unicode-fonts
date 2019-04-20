@@ -1,5 +1,5 @@
 {
-  "name": "unicode-fonts",
+  "name": "unicode-fonts-test-project",
   "version": "0.0.1",
   "description": "transform strings to equivalent unicode characters",
   "main": "dist/src/index.js",
@@ -9,14 +9,14 @@
     "watch": "tsc --watch",
     "build": " tsc",
     "test": "npx ts-node node_modules/jasmine/bin/jasmine.js",
-    "prepare": "npm run build",
-    "prettier": "npx ts-refactor organizeImports \"src/**/*.ts*\" \"spec/**/*.ts*\" --dontAsk && npx prettier  --write --arrow-parens avoid --parser typescript --use-tabs false --no-semi true --single-quote true --tab-width 2 --trailing-comma none --end-of-line lf --prose-wrap preserve --print-width 120  --jsx-bracket-same-line true \"src/**/*.ts*\" \"spec/**/*.ts*\"",
-    "clean": "rm -rf dist",
-    "all": "npm run clean && npm run prettier && npm run build"
+    "clean": "rm -rf dist docs tmpn",
+    "all": "npm run clean &&  npm run build && npm test",
+    "prepare": "npm run build"
   },
   "author": "Sebastian Gurin",
   "license": "MIT",
   "dependencies": {
+    "unicode-fonts": "file:../../..",
     "yargs-parser": "^10.1.0"
   },
   "devDependencies": {
@@ -25,7 +25,6 @@
     "@types/p-map": "^1.1.0",
     "@types/shelljs": "^0.8.4",
     "jasmine": "^3.1.0",
-    "prettier": "^1.16.4",
     "shelljs": "^0.8.2",
     "ts-node": "^7.0.1",
     "typescript": "^3.4.3"

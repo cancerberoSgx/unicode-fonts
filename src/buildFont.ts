@@ -9,7 +9,7 @@ export function buildFont(aMayus: number|number[], aLower: number|number[], digi
     font.push([i,value]);
   }
   for (let i = 48; i < 58; i++) {
-    const value = typeof digit0 === 'number' ? digit0 + i - 48 : digit0[i-97]
+    const value = typeof digit0 === 'number' ? digit0 + i - 48 : digit0[i-48]
     font.push([i,value]);
   }
   digit0;
