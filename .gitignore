@@ -6,3 +6,4 @@ tmp
 project1
 *.tgz
 .yamat
+.DS_Store
