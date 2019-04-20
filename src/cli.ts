@@ -1,37 +1,34 @@
 import { pwd } from "shelljs";
 import { helpAndExit } from "./help";
-import { getConfigPath, flattenDeep } from "./util";
+// import { getConfigPath, flattenDeep } from "./util";
 import { Options } from './types';
+import { getFonts } from './getFonts';
+import { transform } from './transform';
 
-const args = require('yargs-parser')(process.argv.slice(2));
+const args = require('yargs-parser')(process.argv.slice(2)) as Options
 
 export async function main() {
-  const config: Options = {
-    rootPath: args.rootPath || pwd().toString(),
-    yamatJsonFile: args.yamatJsonFile
-  }
-  // config.yamatJsonFile = getConfigPath(config)
-  const firstArg = args._[0]
   if (args.help) {
     helpAndExit(0)
   }
-  // else if (firstArg === 'unlink') {
-  //   return unlink({ ...config, version: args.version || UnlinkVersion.local })
-  // }
-  // else if (firstArg === 'run') {
-  //   const cmd = [].concat(args._).slice(1).join(' ')
-  //   return run({ ...config, cmd, breakOnError: args.breakOnError !== 'no' })
-  // }
-  // else if (firstArg === 'forceDependenciesLatest') {
-  //   let result = await forceDependenciesLatest({ ...config, exclude: args.exclude || 'none', excludeDependencies: (args.excludeDependencies || '').split(',') })
-  //   result = flattenDeep(result).filter(r => r && r.errorCause)
-  //   if (result.length) {
-  //     console.log('ERROR occurred when trying to update dependencies in some projects. Probably you will need to `rm package-lock.json node_modules` manually - I won\'t. Examine the results below, go to each error and remove node_modules and package-lock.json will solve the issues of npm install, in general.\n Errors: \n' + JSON.stringify(result, null, 2) + '\nAborted.');
-  //     process.exit(1)
-  //   }
-  // }
-  // else if (firstArg === 'link') {
-  //   return link(config)
-  // }
-  else throw new Error('Incorrect call. TODO: usage instructions')
+  else if(args.list){
+    const s = 'Hello World, 01234567689'
+    console.log(Object.values(getFonts()).map(f=>` * ${transform(s, f)} : ${f.name}`).join('\n'));
+    return process.exit(0)
+  }
+  else if(args.font) {
+    const font = getFonts()[args.font]
+    if(!font){
+      console.error('Cannot find font '+args.font);
+      return process.exit(1)
+    }
+    if(args.input){
+      console.log(transform(args.input, font));
+      return process.exit(0)
+    }
+  }
+  else {
+    console.error('Invalid call');
+    return     helpAndExit(1)
+  }
 }

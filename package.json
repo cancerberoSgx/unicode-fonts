@@ -24,11 +24,11 @@
   "devDependencies": {
     "@types/jasmine": "^2.8.16",
     "@types/node": "^10.5.2",
-    "@types/shelljs": "^0.8.4",
     "@types/p-map": "^1.1.0",
+    "@types/shelljs": "^0.8.4",
     "jasmine": "^3.1.0",
     "ts-node": "^7.0.1",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.3"
   },
   "repository": "https://github.com/cancerberoSgx/unicode-fonts",
   "keywords": [

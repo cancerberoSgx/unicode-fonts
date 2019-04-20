@@ -15,3 +15,20 @@ H𝕖𝕝𝕝𝕠 𝕎𝕠𝕣𝕝𝕕. H𝕠𝕨 𝕒𝕣𝕖 𝕪𝕠𝕦 𝕥
 𝘏𝘦𝘭𝘭𝘰 𝘞𝘰𝘳𝘭𝘥. 𝘏𝘰𝘸 𝘢𝘳𝘦 𝘺𝘰𝘶 𝘵𝘰𝘥𝘢𝘺 0123456789
 𝙃𝙚𝙡𝙡𝙤 𝙒𝙤𝙧𝙡𝙙. 𝙃𝙤𝙬 𝙖𝙧𝙚 𝙮𝙤𝙪 𝙩𝙤𝙙𝙖𝙮 0123456789
 ```
+
+Explanation: unicode charset supports extra font families, so we replace normal character 'a' (char code 97) with character '𝓪' (char code 55349). So this are not currently font families or different fonts, it's the same font, that provides this special characters, some of them. 
+
+Note: these are not using any ansi escape sequences. We could use those to add colors, bold, underline, etc in the command line. 
+
+Some Unicode categories that contain these type of characters are: 
+
+ * Mathematical Alphanumeric Symbols
+
+# Usage
+
+
+npm i -g unicode-fonts
+
+unicode-fonts --list
+
+unicode-fonts --font scriptItalic --input "My name is Sebastian Gurin"

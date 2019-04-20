@@ -2,6 +2,7 @@ import { getFonts } from '../src/getFonts';
 import { transform } from "../src/transform";
 const s = 'Hello World. How are you today 0123456789';
 const fonts = getFonts();
+console.log(s);
 console.log(transform(s, fonts.bold));
 console.log(transform(s, fonts.italic));
 console.log(transform(s, fonts.boldItalic));
