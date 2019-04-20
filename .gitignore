@@ -1,0 +1,8 @@
+dist
+node_modules
+tests
+*.log
+tmp
+project1
+*.tgz
+.yamat
