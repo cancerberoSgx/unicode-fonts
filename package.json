@@ -1,9 +1,10 @@
 {
   "name": "unicode-fonts",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "transform a string to an equivalent using unicode fonts",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
+  "bin": "bin/unicode-fonts.js",
   "scripts": {
     "watch": "tsc --watch",
     "build": " tsc",
@@ -15,10 +16,6 @@
   "author": "Sebastian Gurin",
   "license": "MIT",
   "dependencies": {
-    "executive": "^1.6.3",
-    "misc-utils-of-mine-generic": "0.0.13",
-    "p-map": "^2.0.0",
-    "shelljs": "^0.8.2",
     "yargs-parser": "^10.1.0"
   },
   "devDependencies": {
@@ -27,6 +24,7 @@
     "@types/p-map": "^1.1.0",
     "@types/shelljs": "^0.8.4",
     "jasmine": "^3.1.0",
+    "shelljs": "^0.8.2",
     "ts-node": "^7.0.1",
     "typescript": "^3.4.3"
   },

@@ -1,6 +1,4 @@
-import { pwd } from "shelljs";
 import { helpAndExit } from "./help";
-// import { getConfigPath, flattenDeep } from "./util";
 import { Options } from './types';
 import { getFonts } from './getFonts';
 import { transform } from './transform';
