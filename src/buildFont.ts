@@ -7,11 +7,11 @@ export function buildFont(
   description = ''
 ) {
   const font: number[][] = []
-  for (let i = 65; i < 90; i++) {
+  for (let i = 65; i < 91; i++) {
     const value = typeof aMayus === 'number' ? aMayus + i - 65 : aMayus[i - 65]
     font.push([i, value])
   }
-  for (let i = 97; i < 122; i++) {
+  for (let i = 97; i < 123; i++) {
     const value = typeof aMayus === 'number' ? aMayus + i - 97 : aMayus[i - 97]
     font.push([i, value])
   }
