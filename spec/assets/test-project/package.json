@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "unicode-fonts": "file:../../..",
-    "yargs-parser": "^10.1.0"
+    "yargs-parser": "^13.1.2"
   },
   "devDependencies": {
     "@types/jasmine": "^2.8.16",
